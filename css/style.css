@@ -29,7 +29,9 @@ canvas{
     position:absolute;
 
     left:50%;
-    top:70%;
+    top:65%;
+
+    width:90%;
 
     transform:
     translate(-50%,-50%)
@@ -94,7 +96,9 @@ canvas{
 
     margin:0;
 
-    font-size:4rem;
+    font-size:clamp(2.2rem,8vw,4rem);
+
+    line-height:1.1;
 
     font-family:'Caveat',cursive;
 
@@ -104,20 +108,22 @@ canvas{
     0 0 10px #ff6bb5,
     0 0 30px #ff6bb5;
 
-    margin-bottom:20px;
+    margin-bottom:15px;
 }
 
 /* TEXTO */
 
 #inicio p{
 
-    font-size:1.2rem;
+    font-size:clamp(1rem,4vw,1.2rem);
 
-    line-height:1.8;
+    line-height:1.6;
 
     color:#e8e8e8;
 
-    margin-bottom:30px;
+    margin-bottom:25px;
+
+    padding:0 10px;
 }
 
 /* BOTÓN */
@@ -167,6 +173,8 @@ canvas{
     scale(.95);
 }
 
+/* BOTÓN MÚSICA */
+
 #toggleMusica{
 
     position:fixed;
@@ -199,4 +207,77 @@ canvas{
 #toggleMusica:hover{
 
     transform:scale(1.1);
+}
+
+/* CELULARES */
+
+@media (max-width:768px){
+
+    #inicio{
+
+        top:68%;
+        width:92%;
+    }
+
+    .icono-corazon{
+
+        font-size:55px;
+    }
+
+    #inicio h1{
+
+        font-size:3rem;
+    }
+
+    #inicio p{
+
+        font-size:1rem;
+    }
+
+    #abrirCarta{
+
+        width:90%;
+
+        max-width:320px;
+
+        padding:16px;
+
+        font-size:1rem;
+    }
+
+    #toggleMusica{
+
+        width:50px;
+        height:50px;
+
+        font-size:20px;
+
+        top:15px;
+        right:15px;
+    }
+}
+
+/* CELULARES PEQUEÑOS */
+
+@media (max-width:480px){
+
+    #inicio{
+
+        top:70%;
+    }
+
+    #inicio h1{
+
+        font-size:2.4rem;
+    }
+
+    #inicio p{
+
+        font-size:.95rem;
+    }
+
+    .icono-corazon{
+
+        font-size:48px;
+    }
 }
