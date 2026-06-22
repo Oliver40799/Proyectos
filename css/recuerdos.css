@@ -1,0 +1,352 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    background:
+    radial-gradient(circle at center,#080818,#020208);
+
+    color:white;
+
+    font-family:'Segoe UI',sans-serif;
+
+    overflow-x:hidden;
+}
+
+/* CONTENEDOR */
+
+.contenedor{
+    width:92%;
+    max-width:1400px;
+
+    margin:auto;
+
+    padding:40px 20px 80px;
+}
+
+/* CORAZÓN ARRIBA */
+
+.decoracion{
+    text-align:center;
+    font-size:55px;
+
+    margin-bottom:10px;
+
+    animation:flotar 3s ease-in-out infinite;
+}
+
+@keyframes flotar{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+}
+
+/* TITULO */
+
+h1{
+
+    text-align:center;
+
+    font-family:'Caveat',cursive;
+
+    font-size:90px;
+
+    font-weight:700;
+
+    color:#ffe4f4;
+
+    text-shadow:
+    0 0 10px #ff6bb5,
+    0 0 30px #ff6bb5;
+
+    margin-bottom:20px;
+}
+
+/* INTRO */
+
+.intro{
+
+    text-align:center;
+
+    max-width:850px;
+
+    margin:0 auto 60px;
+
+    color:#d5d5d5;
+
+    font-size:1.3rem;
+
+    line-height:1.8;
+}
+
+/* MENSAJE DEL DIA */
+
+.mensaje-dia{
+
+    margin-bottom:70px;
+}
+
+.mensaje-dia h2{
+
+    text-align:center;
+
+    color:#ffb2df;
+
+    margin-bottom:25px;
+
+    font-size:2.3rem;
+}
+
+.tarjeta-principal{
+
+    max-width:1000px;
+
+    margin:auto;
+
+    background:
+    rgba(255,255,255,.04);
+
+    border:
+    1px solid rgba(255,105,180,.25);
+
+    border-radius:30px;
+
+    padding:45px;
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:
+    0 0 30px rgba(255,105,180,.15);
+}
+
+#mensajeDia{
+
+    font-size:1.6rem;
+
+    line-height:2;
+
+    text-align:center;
+}
+
+/* TITULO MENSAJES */
+
+.titulo-mensajes{
+
+    text-align:center;
+
+    color:#ffb2df;
+
+    margin-bottom:35px;
+
+    font-size:2.4rem;
+}
+
+/* GRID */
+
+.mensajes{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(320px,1fr));
+
+    gap:30px;
+}
+
+/* TARJETAS */
+
+.mensaje{
+
+    background:
+    rgba(255,255,255,.04);
+
+    border:
+    1px solid rgba(255,105,180,.20);
+
+    border-radius:25px;
+
+    padding:35px;
+
+    min-height:320px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    font-size:1.15rem;
+
+    line-height:2;
+
+    color:#f3f3f3;
+
+    backdrop-filter:blur(10px);
+
+    transition:.4s;
+}
+
+.mensaje:hover{
+
+    transform:
+    translateY(-10px);
+
+    box-shadow:
+    0 0 30px rgba(255,105,180,.25);
+}
+
+/* FINAL */
+
+.final{
+
+    margin-top:90px;
+
+    background:
+    rgba(255,255,255,.04);
+
+    border:
+    1px solid rgba(255,105,180,.20);
+
+    border-radius:30px;
+
+    padding:60px;
+
+    text-align:center;
+
+    backdrop-filter:blur(10px);
+}
+
+.corazon-final{
+
+    font-size:70px;
+
+    margin-bottom:15px;
+
+    animation:flotar 3s ease-in-out infinite;
+}
+
+.final h2{
+
+    color:#ff9ad5;
+
+    margin-bottom:20px;
+
+    font-size:2rem;
+}
+
+.final p{
+
+    font-size:1.3rem;
+
+    margin-bottom:15px;
+
+    line-height:1.8;
+}
+
+.final h3{
+
+    color:#ff6bb5;
+
+    margin-top:20px;
+}
+
+/* SCROLL */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#090916;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#ff6bb5;
+    border-radius:20px;
+}
+
+#toggleMusica{
+
+    position:fixed;
+
+    top:20px;
+    right:20px;
+
+    width:55px;
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(10px);
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    z-index:999;
+
+    transition:.3s;
+}
+
+#toggleMusica:hover{
+
+    transform:scale(1.1);
+}
+
+#contadorDias{
+
+    text-align:center;
+
+    margin-top:15px;
+    margin-bottom:40px;
+
+    font-size:1.4rem;
+
+    color:#ffb6de;
+
+    font-weight:600;
+
+    letter-spacing:1px;
+
+    text-shadow:
+    0 0 10px rgba(255,182,222,.6),
+    0 0 20px rgba(255,122,195,.3);
+
+    animation:
+    brillo 3s ease-in-out infinite;
+}
+
+@keyframes brillo{
+
+    0%{
+        opacity:.7;
+    }
+
+    50%{
+        opacity:1;
+    }
+
+    100%{
+        opacity:.7;
+    }
+}
